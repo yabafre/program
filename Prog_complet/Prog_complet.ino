@@ -1,4 +1,4 @@
-String myAPIkey = "Y6EU1TA63JGHBIZL";  // chaine de charactère de la clé_API
+String myAPIkey = "";  // chaine de charactère de la clé_API
 
 #include <SoftwareSerial.h> // Inclure la librairie SoftwareSerial pour la communication série
 #include <Wire.h> // Inclure la librairie wire pour la communication en I2C
@@ -34,7 +34,7 @@ void setup()
    while(check_connection==0)
   {
     Serial.print(".");
-  ESP8266.print("AT+CWJAP=\"frelike\",\"68810012470345\"\r\n");
+  ESP8266.print("AT+CWJAP=\"Name-wifi\",\"key-wifi\"\r\n");
   ESP8266.setTimeout(5000);
  if(ESP8266.find("WIFI CONNECTED\r\n")==1)
  {
