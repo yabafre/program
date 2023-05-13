@@ -11,7 +11,7 @@ long waitTime = 0;// déclaration d'une variable de type long
 unsigned char check_connection=0; //déclaration d'une variable non signé check_connection qui à prend pour valeur 0
 unsigned char times_check=0; //déclaration d'une variable non signé times_check pour l'attente de connexion
 
-String apiKey = "Y6EU1TA63JGHBIZL"; //thingspeak WRITE API key
+String apiKey = ""; //thingspeak WRITE API key
 float a; // variable décimal
 const float n = 0.116875406; // const décimal de hauteur d'eau
 
@@ -35,7 +35,7 @@ ESP8266.println("AT+CWMODE=1");   // esp8266 mode client
    while(check_connection==0)
   {
     Serial.print(".");
-  ESP8266.print("AT+CWJAP=\"Freebox-630DD8\",\"68810012470345\"\r\n");
+  ESP8266.print("AT+CWJAP=\"Name-wifi\",\"key-wifi\"\r\n");
   ESP8266.setTimeout(2000);
 // on doit lire "WIFI CONNECTED"
  if(ESP8266.find("WIFI CONNECTED\r\n")==1)
